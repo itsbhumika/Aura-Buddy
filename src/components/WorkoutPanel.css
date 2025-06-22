@@ -1,0 +1,74 @@
+.workout-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cycling-sport {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff7f7;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.cycling-sport .left {
+  max-width: 65%;
+}
+
+.cycling-sport h3 {
+  margin: 10px 0 8px;
+  font-size: 18px;
+  color: #b91c1c;
+}
+
+.cycling-sport p {
+  font-size: 14px;
+  color: #991b1b;
+}
+
+.cycling-sport .badge {
+  background: #fca5a5;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #7f1d1d;
+  font-weight: 600;
+}
+
+.cycling-sport img {
+  width: 100px;
+  height: auto;
+}
+
+.home-workouts {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+.home-workouts .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 16px;
+  color: #374151;
+}
+
+.home-workouts ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.home-workouts li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #f3f4f6;
+  font-size: 14px;
+  color: #374151;
+}
