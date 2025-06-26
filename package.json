@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@dicebear/avataaars": "^9.2.3",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "avataaars": "^2.0.0",
     "framer-motion": "^12.18.1",
     "react": "^19.1.0",
     "react-circular-progressbar": "^2.2.0",

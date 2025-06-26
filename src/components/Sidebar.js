@@ -1,11 +1,11 @@
 import React from 'react';
 import {
   FaChartPie, FaBed, FaChartBar, FaTrophy, FaStickyNote,
-  FaDumbbell, FaShareAlt, FaHeart, FaAppleAlt, FaSignOutAlt
+  FaDumbbell, FaShareAlt, FaSignOutAlt
 } from 'react-icons/fa';
 import './Sidebar.css';
 
-const Sidebar = ({ active, onSelect }) => {
+const Sidebar = ({ active, onSelect, visible, onClose }) => {
   const menuItems = [
     { icon: <FaChartPie />, label: 'Dashboard' },
     { icon: <FaBed />, label: 'Sleep Counter' },
@@ -16,13 +16,29 @@ const Sidebar = ({ active, onSelect }) => {
     { icon: <FaShareAlt />, label: 'Sharing Center' }
   ];
 
-  const quickActions = [
-    { icon: <FaHeart />, label: 'Heart Rate' },
-    { icon: <FaAppleAlt />, label: 'Nutrition And Health' }
-  ];
-
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar ${visible ? 'open' : ''}`}>
+      {/* Close Button */}
+      <button
+        onClick={onClose}
+        className="close-sidebar-btn"
+        style={{
+          position: 'absolute',
+          top: 16,
+          right: 16,
+          background: 'none',
+          border: 'none',
+          fontSize: 24,
+          color: '#888',
+          cursor: 'pointer',
+          zIndex: 1001,
+        }}
+        aria-label="Close Sidebar"
+        title="Close Sidebar"
+      >
+        &times;
+      </button>
+
       <h2 className="logo">Aura Buddy </h2>
 
       <ul className="nav-list">
@@ -36,21 +52,6 @@ const Sidebar = ({ active, onSelect }) => {
           </li>
         ))}
       </ul>
-
-      <div className="quick-actions">
-        <h4>Quick actions</h4>
-        <ul>
-          {quickActions.map(({ icon, label }) => (
-            <li
-              key={label}
-              className={active === label ? 'active' : ''}
-              onClick={() => onSelect(label)}
-            >
-              {icon} {label}
-            </li>
-          ))}
-        </ul>
-      </div>
 
       <div
         className="logout"

@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap');
 
 .sleep-game {
-  background: linear-gradient(135deg, #fdf6e3, #fef9c3);
   padding: 30px;
   border-radius: 20px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
   text-align: center;
   font-family: 'Baloo 2', sans-serif;
   position: relative;
-  overflow: hidden;
+  overflow: auto;
   border: 4px dashed #a78bfa;
   animation: gamePulse 8s infinite alternate;
   color: #1e293b;
+  min-height: 100vh;
 }
 
 @keyframes gamePulse {
