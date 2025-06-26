@@ -122,9 +122,7 @@ These are a little UI-ready but not yet interactive:
 | 📝 Notes        | Placeholder for note editor                              |
 | 🏋 Workout Plan | Shows base workout plan view                             |
 | 🔗 Sharing      | Displays sharing mock layout                             |
-| ❤️ Heart Rate   | Placeholder for BPM tracking                             |
-| 🍎 Nutrition    | Static UI for diet planning                              |
-| 🚪 Logout       | Logs out with visual feedback only                       |
+
 
 ---
 
@@ -133,7 +131,7 @@ These are a little UI-ready but not yet interactive:
 ```bash
 git clone https://github.com/your-username/aura-buddy.git
 cd aura-buddy
-npm install
+npm install --legacy-peer-deps (If you're using React 18 or 19, some older packages might cause dependency conflicts. Use this command to install all packages while resolving version issues)
 npm start
 ````
 
