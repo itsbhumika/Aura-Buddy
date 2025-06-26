@@ -7,10 +7,12 @@ Aura Buddy is a beautifully crafted, interactive React-based wellness app that h
 ## ✨ Features by Sidebar Options
 
 ### 📊 Dashboard
-- Overview of calories, weight, sleep, steps, heart rate, and water intake.
-- Integrated layout with Statistics and WorkoutPanel.
-- Clean, responsive layout.
-
+- Daily stats: Steps, water, calories, sleep.
+- Weekly progress: Completion & averages.
+- Weather insights: Conditions + activity tips.
+- Reminders: Custom wellness tasks.
+- Quick actions: Log water, workouts, view stats.
+- Theme toggle & profile avatar customization.
 
 
 ### 💤 Sleep Counter
@@ -26,13 +28,14 @@ Aura Buddy is a beautifully crafted, interactive React-based wellness app that h
 
 
 ### 📈 Statistics
-- Weekly workout bar chart.
-- Exercise breakdown by category (Badminton, Jogging, etc.).
-- Calories, sleep, and water tracking cards with editable values.
-- Glassmorphic-style UI.
-- Circular and bar visualizations for wellness stats.
+- Workout Charts: Daily, weekly, or monthly activity trends.
+- Exercise Breakdown: Pie chart of time spent by category (Jogging, Yoga, etc.).
+- Smart Tips: Suggestions based on least-performed workouts.
+- Health Cards: Circular meters for Calories, Water, and Sleep tracking.
+- Nutrition Tracker: Macro breakdown (protein, carbs, fats, etc.) with progress bars.
+- Nutrient Alerts: Detects high/low intake and gives food suggestions.
+- Insights Panel: Daily activity insights, streaks, and smart improvement tips.
 
-> Further styling under development
 
 
 
@@ -44,7 +47,7 @@ Aura Buddy is a beautifully crafted, interactive React-based wellness app that h
 - 🗓️ Streak Calendar to track consistency  
 - 🔓 Unlockable avatars/themes after achievements  
 
-> Currently it has placeholder text but soon features will be implemented
+> Currently it is little static but features are under development simultaneously
 
 
 
@@ -81,40 +84,6 @@ Aura Buddy is a beautifully crafted, interactive React-based wellness app that h
 > Currently it has placeholder text but soon features will be implemented
 
 
-
-### ❤️ Heart Rate 
-- 📈 Live BPM line chart (mock)  
-- 💓 Zone indicators: fat burn, cardio, peak  
-- 🚨 Warning popups if BPM out of safe range  
-- 🎯 Target BPM calculator  
-- 🧘 Resting heart rate history  
-- 🌙 Sleep BPM logs  
-
-> Currently it has placeholder text but soon features will be implemented
-
-
-
-### 🍎 Nutrition & Health
-- 🍽️ Log meals (breakfast to snacks)  
-- 📊 Track calories/macros visually  
-- 🥗 Food suggestions by goal  
-- 🧾 Daily nutrition tips  
-- 🛒 Auto shopping list  
-- 📷 Meal photo upload (mock)  
-
-> Currently it has placeholder text but soon features will be implemented
-
-
-
-### 🚪 Logout 
-- ⚠️ Confirmation modal  
-- ⏳ Countdown redirect animation  
-- 💬 Motivational exit quote  
-
-> Currently it has placeholder text but soon features will be implemented
-
-
-
 >⚠️ **Note:** Most sections beyond Sleep Counter and Statistics are currently static placeholders designed for easy future enhancement.
 
 ---
@@ -131,13 +100,16 @@ Aura Buddy is a beautifully crafted, interactive React-based wellness app that h
 | 📊 Sleep History      | View last 7 days in chart                            |
 
 
-
-### 📈 Statistics
-| Feature               | Action                                                |
-| --------------------- | ----------------------------------------------------- |
-| 📉 Weekly Workouts     | Check bar chart of workout minutes                   |
-| 🏋 Exercise Breakdown  | View per-category stats (e.g., Jogging, Badminton)   |
-| 🧮 Edit Cards          | Manually adjust calories, steps, heart rate, etc.    |
+### 📉 Statistics
+| Feature               | Action                                                                 |
+|-----------------------|------------------------------------------------------------------------|
+| 📉 Weekly Workouts     | Toggle between Daily, Weekly, and Monthly views in the bar chart.     |
+| 🏋 Exercise Breakdown  | View pie chart of workout categories (e.g., Jogging, Badminton, etc.) |
+| ➕ Add Workout         | Click "+" to log a new workout and verify data updates.               |
+| 🧮 Edit Cards          | Manually adjust Calories, Water, and Sleep goals and check progress.  |
+| 🍎 Nutrition Tracker   | Add nutrients, check alerts, and view meal suggestions.               |
+| 🔍 Insights            | Expand Insights to see daily progress, patterns, and tips.            |
+| 🔁 Reset Stats         | Use reset option and ensure all values return to default.             |
 
 
 
@@ -174,64 +146,64 @@ npm start
 * 📊 Dashboard
 * 💤 Sleep Counter
 * 📈 Statistics
-* 🏆 Achievements *(static)*
+* 🏆 Achievements *(static with little functioning)*
 * 📝 Notes *(static)*
 * 🏋 Workout Plan *(static with little functioning)*
 * 🔗 Sharing Center *(static)*
 
-### Quick Actions:
-
-* ❤️ Heart Rate *(static)*
-* 🍎 Nutrition & Health *(static)*
-
-### Logout:
-
-* 🚪 Ends the session with visual feedback
-
----
 
 ## 🧱 Project Structure
 
 ```
-aura-buddy/
+
+fitness/
+├── build/ 
+├── node_modules/
 ├── public/
-│   ├── index.html
-│   └── assets/
-│       ├── audio-1.mp3
-│       ├── audio-2.mp3
-│       ├── happy.png
-│       ├── sad.png
-│       ├── meh.png
-│       ├── night-sky-bg.jpeg
-│       ├── stars-bg.jpeg
-│       ├── profile.jpeg
-│       ├── images.jpeg
-│       └── images.png
+│ ├── assets/
+│ │ ├── 1k.png
+│ │ ├── audio-1.mp3
+│ │ ├── audio-2.mp3
+│ │ ├── aurabuddy-logo.png
+│ │ ├── bird.png
+│ │ ├── fire.png
+│ │ ├── happy.png
+│ │ ├── image.png
+│ │ ├── images.jpeg
+│ │ ├── images.png
+│ │ ├── marathon.png
+│ │ ├── meh.png
+│ │ ├── sad.png
+│ │ ├── moon.jpeg
+│ │ ├── moon.png
+│ │ ├── night-sky-bg.jpeg
+│ │ ├── profile.jpeg
+│ │ ├── stars-bg.jpeg
+│ └── index.html
 ├── src/
-│   ├── App.js
-│   ├── App.css
-│   ├── index.js
-│   ├── data/
-│   │   └── workouts.js
-│   ├── components/
-│   │   ├── ActivityDetails.js
-│   │   ├── ProgressBar.js
-│   │   ├── ProgressBar.css
-│   │   ├── RunTracker.js
-│   │   ├── RunTracker.css
-│   │   ├── Sidebar.js
-│   │   ├── Sidebar.css
-│   │   ├── SleepCounter.js
-│   │   ├── SleepCounter.css
-│   │   ├── Statistics.js
-│   │   ├── Statistics.css
-│   │   ├── Topbar.js
-│   │   ├── Topbar.css
-│   │   ├── WorkoutPanel.js
-│   │   └── WorkoutPanel.css
-├── package.json
+│ ├── components/ 
+│ │ ├── Achievements.js
+│ │ ├── Achievements.css
+│ │ ├── Dashboard.js
+│ │ ├── Sidebar.js
+│ │ ├── Sidebar.css
+│ │ ├── SleepCounter.js
+│ │ ├── SleepCounter.css
+│ │ ├── Statistics.js
+│ │ ├── Statistics.css
+│ │ ├── Topbar.js
+│ │ ├── Topbar.css
+│ │ ├── WorkoutPanel.js
+│ │ ├── WorkoutPanel.css
+│ ├── data/
+│ │ ├── Workouts.j
+│ ├── App.js
+│ ├── App.css
+│ ├── index.js
+├── .gitignore 
+├── package.json 
 ├── package-lock.json
-└── README.md
+├── README.md
 ```
 
 ---
